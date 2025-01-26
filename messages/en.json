@@ -1,0 +1,30 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "careers": "Careers"
+  },
+  "home": {
+    "hero": {
+      "title": "TRANSFORM YOUR BUSINESS",
+      "subtitle": "We deliver innovative solutions that drive real business outcomes",
+      "cta": "Get Started"
+    }
+  },
+  "contact": {
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully!",
+      "error": "Failed to send message. Please try again."
+    }
+  }
+}
+
