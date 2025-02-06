@@ -141,12 +141,12 @@ const Header = () => {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     <DropdownMenuItem>
-                      <Link href="/products/flow" onClick={() => setIsMenuOpen(false)}>
+                      <Link href="https://fznoflow.netlify.app" onClick={() => setIsMenuOpen(false)}>
                         Flow
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
-                      <Link href="/products/vision" onClick={() => setIsMenuOpen(false)}>
+                      <Link href="https://fznovision.netlify.app" onClick={() => setIsMenuOpen(false)}>
                         Vision
                       </Link>
                     </DropdownMenuItem>
