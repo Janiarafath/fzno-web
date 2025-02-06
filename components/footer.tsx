@@ -11,7 +11,6 @@ const Footer = () => {
           element.scrollIntoView({ behavior: "smooth" })
         }
       } else {
-        // Use window.location for navigation instead of router
         window.location.href = `/#${id}`
       }
     }
@@ -41,12 +40,20 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => scrollToSection("about")}
+                <Link
+                  href="https://fznoflow.netlify.app/"
                   className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
                 >
-                  About Us
-                </button>
+                  Flow
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://fznovision.netlify.app/"
+                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
+                >
+                  Vision
+                </Link>
               </li>
               <li>
                 <Link
@@ -54,14 +61,6 @@ const Footer = () => {
                   className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
                 >
                   Who We Are
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/customers"
-                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
-                >
-                  Customers
                 </Link>
               </li>
               <li>

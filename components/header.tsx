@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
-import { Menu, X, Sun, Moon } from "lucide-react"
+import { Menu, X, Sun, Moon, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import AnimatedLogo from "./AnimatedLogo"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,6 +15,7 @@ const Header = () => {
   const [mounted, setMounted] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
+  const [isProductsOpen, setIsProductsOpen] = useState(false)
 
   useEffect(() => {
     setMounted(true)
@@ -57,6 +59,22 @@ const Header = () => {
               >
                 Services
               </button>
+              <DropdownMenu onOpenChange={setIsProductsOpen}>
+                <DropdownMenuTrigger className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                  Products{" "}
+                  <ChevronDown
+                    className={`inline-block w-4 h-4 transition-transform duration-200 ${isProductsOpen ? "rotate-180" : ""}`}
+                  />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem>
+                    <Link href="https://fznoflow.netlify.app/">Flow</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link href="https://fznovision.netlify.app/">Vision</Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <Link
                 href="/who-we-are"
                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
@@ -68,24 +86,6 @@ const Header = () => {
                 }}
               >
                 Who We Are
-              </Link>
-              <Link
-                href="/customers"
-                className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                onClick={(e) => {
-                  e.preventDefault()
-                  router.push("/customers").then(() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" })
-                  })
-                }}
-              >
-                Customers
-              </Link>
-              <Link
-                href="/careers"
-                className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-              >
-                Careers
               </Link>
               <button
                 onClick={() => scrollToSection("contact")}
@@ -132,6 +132,26 @@ const Header = () => {
                 >
                   Services
                 </button>
+                <DropdownMenu onOpenChange={setIsProductsOpen}>
+                  <DropdownMenuTrigger className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-left">
+                    Products{" "}
+                    <ChevronDown
+                      className={`inline-block w-4 h-4 transition-transform duration-200 ${isProductsOpen ? "rotate-180" : ""}`}
+                    />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem>
+                      <Link href="/products/flow" onClick={() => setIsMenuOpen(false)}>
+                        Flow
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link href="/products/vision" onClick={() => setIsMenuOpen(false)}>
+                        Vision
+                      </Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
                 <Link
                   href="/who-we-are"
                   className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
@@ -143,25 +163,6 @@ const Header = () => {
                   }}
                 >
                   Who We Are
-                </Link>
-                <Link
-                  href="/customers"
-                  className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    router.push("/customers").then(() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" })
-                    })
-                  }}
-                >
-                  Customers
-                </Link>
-                <Link
-                  href="/careers"
-                  className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Careers
                 </Link>
                 <button
                   onClick={() => scrollToSection("contact")}
