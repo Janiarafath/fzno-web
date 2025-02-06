@@ -68,10 +68,10 @@ const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem>
-                    <Link href="https://fznoflow.netlify.app/">Flow</Link>
+                    <Link href="https://fznoflow.netlify.app">Flow</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link href="https://fznovision.netlify.app/">Vision</Link>
+                    <Link href="https://fznovision.netlify.app">Vision</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
