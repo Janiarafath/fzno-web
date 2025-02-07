@@ -1,106 +1,147 @@
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Image from "next/image"
-
-const teamMembers = [
-  {
-    name: "Javed",
-    position: "CEO & Founder",
-    image: "/placeholder.svg?height=200&width=200",
-    description: "John has over 20 years of experience in the tech industry and is passionate about innovation.",
-  },
-  {
-    name: "Afri",
-    position: "CTO",
-    image: "/placeholder.svg?height=200&width=200",
-    description: "Jane leads our technical team and has a background in AI and machine learning.",
-  },
-  {
-    name: "Mohammed",
-    position: "Head of Quality Assurance",
-    image: "/placeholder.svg?height=200&width=200",
-    description: "Mike ensures that all our solutions meet the highest quality standards.",
-  },
-  {
-    name: "basha",
-    position: "Lead Power BI Developer",
-    image: "/placeholder.svg?height=200&width=200",
-    description: "Sarah is an expert in data visualization and business intelligence solutions.",
-  },
-]
 
 export default function WhoWeArePage() {
   return (
     <div className="min-h-screen pt-16 flex flex-col">
-      <div className="flex-grow py-12 md:py-24 bg-gradient-to-b from-green-50 to-white dark:from-green-950/20 dark:to-gray-950">
+      <div className="flex-grow py-12 md:py-24 bg-gradient-to-b from-purple-50 to-white dark:from-purple-950/20 dark:to-gray-950">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center text-gray-900 dark:text-gray-100">
-              Who We Are
-            </h1>
-            <p className="text-lg sm:text-xl text-center mb-10 text-gray-600 dark:text-gray-300">
-              FZNO is a leading technology solutions provider, dedicated to transforming businesses through innovative
-              and cutting-edge solutions.
-            </p>
-            <div className="space-y-8 mb-12">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Our Mission</h2>
-                <p className="text-gray-600 dark:text-gray-300">
-                  To empower businesses with state-of-the-art technology solutions that drive growth, efficiency, and
-                  innovation.
-                </p>
+            <div className="prose dark:prose-invert max-w-none">
+              <h1 className="text-4xl font-bold mb-6">Who We Are</h1>
+
+              <p className="text-xl mb-8">
+                FZNO is a leading technology solutions provider, dedicated to revolutionizing businesses with
+                cutting-edge innovation. We combine creativity, intelligence, and expertise to deliver solutions that
+                drive success in a fast-evolving digital world.
+              </p>
+
+              <h2 className="text-2xl font-bold mt-12 mb-4">Our Story</h2>
+              <p className="mb-8">
+                FZNO was founded with a bold vision—to empower businesses with smart, scalable, and future-ready
+                technology solutions. From our humble beginnings, we have grown into a trusted partner for companies
+                seeking transformative digital experiences. Our journey has been marked by continuous innovation,
+                customer-centric solutions, and a passion for excellence.
+              </p>
+
+              <h2 className="text-2xl font-bold mb-4">What We Do</h2>
+              <p className="mb-4">
+                At FZNO, we don't just provide technology—we create experiences that redefine possibilities. Our
+                solutions include:
+              </p>
+              <ul className="space-y-2 mb-8">
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  Intelligent automation for business efficiency
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  Data-driven insights for smarter decision-making
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  Custom software tailored to unique business needs
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  Secure and scalable cloud solutions for growth
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  AI-powered innovations that push the boundaries of technology
+                </li>
+              </ul>
+
+              <h2 className="text-2xl font-bold mb-4">Why Choose Us?</h2>
+              <ul className="space-y-2 mb-8">
+                <li className="flex items-start">
+                  <span className="mr-2">🔹</span>
+                  <strong>Future-Ready Solutions</strong> – We stay ahead of the curve, delivering technology that's
+                  built for tomorrow.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">🔹</span>
+                  <strong>Tailored for You</strong> – Every solution is designed to align with your specific goals.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">🔹</span>
+                  <strong>Unmatched Innovation</strong> – We challenge limits and create solutions that drive real
+                  impact.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">🔹</span>
+                  <strong>Seamless Experience</strong> – From consultation to implementation, we ensure a smooth and
+                  hassle-free journey.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">🔹</span>
+                  <strong>Commitment to Excellence</strong> – Quality is at the heart of everything we do.
+                </li>
+              </ul>
+
+              <h2 className="text-2xl font-bold mb-4">Industries We Serve</h2>
+              <p className="mb-4">
+                FZNO partners with businesses across various industries, helping them harness the power of technology
+                for growth:
+              </p>
+              <ul className="space-y-2 mb-8">
+                <li className="flex items-start">
+                  <span className="mr-2">📌</span>
+                  <strong>Finance</strong> – Enhancing security, automation, and data-driven decision-making.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">📌</span>
+                  <strong>Healthcare</strong> – Improving patient care through smart healthcare solutions.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">📌</span>
+                  <strong>Retail & E-commerce</strong> – Powering seamless customer experiences and intelligent
+                  insights.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">📌</span>
+                  <strong>Manufacturing</strong> – Driving efficiency with IoT and automation solutions.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">📌</span>
+                  <strong>Technology & Startups</strong> – Supporting innovation with scalable tech solutions.
+                </li>
+              </ul>
+
+              <h2 className="text-2xl font-bold mb-4">Our Approach</h2>
+              <p className="mb-4">
+                At FZNO, we believe in a customer-first approach. We collaborate closely with businesses to understand
+                their challenges, craft personalized solutions, and implement them with precision. Our methodology
+                focuses on:
+              </p>
+              <ul className="space-y-2 mb-8">
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  <strong>Understanding your needs</strong> – Deep dive into your business goals and challenges.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  <strong>Innovating with purpose</strong> – Designing smart, efficient, and scalable solutions.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  <strong>Delivering excellence</strong> – Ensuring seamless execution and high-quality results.
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  <strong>Continuous evolution</strong> – Keeping your business ahead with the latest advancements.
+                </li>
+              </ul>
+
+              <div className="text-center mt-12">
+                <Link href="/contact">
+                  <Button size="lg" className="rounded-full">
+                    Get in Touch
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Our Values</h2>
-                <ul className="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300">
-                  <li>Innovation: We constantly push the boundaries of what's possible</li>
-                  <li>Excellence: We strive for the highest quality in everything we do</li>
-                  <li>Collaboration: We believe in the power of teamwork and partnerships</li>
-                  <li>Integrity: We conduct our business with honesty and transparency</li>
-                  <li>Customer-centric: We put our clients' needs at the heart of our solutions</li>
-                </ul>
-              </div>
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Our Expertise</h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">We specialize in four key areas of technology:</p>
-                <ul className="list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300">
-                  <li>Artificial Intelligence</li>
-                  <li>Quality Assurance</li>
-                  <li>Power BI Analytics</li>
-                  <li>Web Development</li>
-                </ul>
-              </div>
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-gray-900 dark:text-gray-100">
-              Meet Our Team
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              {teamMembers.map((member, index) => (
-                <div
-                  key={index}
-                  className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col items-center"
-                >
-                  <Image
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    width={200}
-                    height={200}
-                    className="rounded-full mb-4"
-                  />
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">{member.name}</h3>
-                  <p className="text-purple-600 dark:text-purple-400 mb-2">{member.position}</p>
-                  <p className="text-gray-600 dark:text-gray-300 text-center">{member.description}</p>
-                </div>
-              ))}
-            </div>
-            <div className="text-center">
-              <Link href="/contact">
-                <Button size="lg" className="rounded-full">
-                  Get in Touch
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
             </div>
           </div>
         </div>

@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div className="container mx-auto px-6 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div>
             <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Quick Links</h4>
             <ul className="space-y-2">
@@ -41,34 +41,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="https://fznoflow.netlify.app/"
-                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
-                >
-                  Flow
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://fznovision.netlify.app/"
-                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
-                >
-                  Vision
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/who-we-are"
                   className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
                 >
                   Who We Are
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/careers"
-                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
-                >
-                  Careers
                 </Link>
               </li>
               <li>
@@ -78,6 +54,35 @@ const Footer = () => {
                 >
                   Contact
                 </button>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
+                >
+                  Careers
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Products</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="https://fznoflow.netlify.app/"
+                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
+                >
+                  TransformIQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://fznovision.netlify.app/"
+                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
+                >
+                  VisionIQ
+                </Link>
               </li>
             </ul>
           </div>

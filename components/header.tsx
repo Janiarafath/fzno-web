@@ -53,12 +53,6 @@ const Header = () => {
               >
                 Home
               </Link>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-              >
-                Services
-              </button>
               <DropdownMenu onOpenChange={setIsProductsOpen}>
                 <DropdownMenuTrigger className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                   Products{" "}
@@ -68,13 +62,19 @@ const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem>
-                    <Link href="https://fznoflow.netlify.app">Flow</Link>
+                    <Link href="https://fznoflow.netlify.app/">TransformIQ</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link href="https://fznovision.netlify.app">Vision</Link>
+                    <Link href="https://fznovision.netlify.app/">VisionIQ</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
+              <button
+                onClick={() => scrollToSection("services")}
+                className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+              >
+                Services
+              </button>
               <Link
                 href="/who-we-are"
                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
@@ -126,12 +126,6 @@ const Header = () => {
                 >
                   Home
                 </Link>
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-left"
-                >
-                  Services
-                </button>
                 <DropdownMenu onOpenChange={setIsProductsOpen}>
                   <DropdownMenuTrigger className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-left">
                     Products{" "}
@@ -141,17 +135,23 @@ const Header = () => {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     <DropdownMenuItem>
-                      <Link href="https://fznoflow.netlify.app" onClick={() => setIsMenuOpen(false)}>
-                        Flow
+                      <Link href="https://fznoflow.netlify.app/" onClick={() => setIsMenuOpen(false)}>
+                        TransformIQ
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
-                      <Link href="https://fznovision.netlify.app" onClick={() => setIsMenuOpen(false)}>
-                        Vision
+                      <Link href="https://fznovision.netlify.app/" onClick={() => setIsMenuOpen(false)}>
+                        VisionIQ
                       </Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors text-left"
+                >
+                  Services
+                </button>
                 <Link
                   href="/who-we-are"
                   className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
