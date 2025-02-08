@@ -53,32 +53,48 @@ export default function WhoWeArePage() {
                 </li>
               </ul>
 
-              <h2 className="text-2xl font-bold mb-4">Why Choose Us?</h2>
-              <ul className="space-y-2 mb-8">
-                <li className="flex items-start">
-                  <span className="mr-2">🔹</span>
-                  <strong>Future-Ready Solutions</strong> – We stay ahead of the curve, delivering technology that's
-                  built for tomorrow.
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">🔹</span>
-                  <strong>Tailored for You</strong> – Every solution is designed to align with your specific goals.
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">🔹</span>
-                  <strong>Unmatched Innovation</strong> – We challenge limits and create solutions that drive real
-                  impact.
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">🔹</span>
-                  <strong>Seamless Experience</strong> – From consultation to implementation, we ensure a smooth and
-                  hassle-free journey.
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2">🔹</span>
-                  <strong>Commitment to Excellence</strong> – Quality is at the heart of everything we do.
-                </li>
-              </ul>
+              <h2 className="text-2xl font-bold mb-6">Why Choose Us?</h2>
+              <div className="grid gap-4 mb-8">
+                <div className="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+                  <span className="mt-1">🔹</span>
+                  <div>
+                    <span className="font-bold">Future-Ready Solutions</span>
+                    <span className="ml-2">
+                      – We stay ahead of the curve, delivering technology that's built for tomorrow.
+                    </span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+                  <span className="mt-1">🔹</span>
+                  <div>
+                    <span className="font-bold">Tailored for You</span>
+                    <span className="ml-2">– Every solution is designed to align with your specific goals.</span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+                  <span className="mt-1">🔹</span>
+                  <div>
+                    <span className="font-bold">Unmatched Innovation</span>
+                    <span className="ml-2">– We challenge limits and create solutions that drive real impact.</span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+                  <span className="mt-1">🔹</span>
+                  <div>
+                    <span className="font-bold">Seamless Experience</span>
+                    <span className="ml-2">
+                      – From consultation to implementation, we ensure a smooth and hassle-free journey.
+                    </span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+                  <span className="mt-1">🔹</span>
+                  <div>
+                    <span className="font-bold">Commitment to Excellence</span>
+                    <span className="ml-2">– Quality is at the heart of everything we do.</span>
+                  </div>
+                </div>
+              </div>
 
               <h2 className="text-2xl font-bold mb-4">Industries We Serve</h2>
               <p className="mb-4">
