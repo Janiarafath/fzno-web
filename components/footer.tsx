@@ -70,18 +70,18 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="https://fznoflow.netlify.app/"
+                  href="https://analytixflow.fzno.in/"
                   className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
                 >
-                  TransformIQ
+                  AnalytixFlow
                 </Link>
               </li>
               <li>
                 <Link
-                  href="https://fznovision.netlify.app/"
+                  href="https://dr5hn.github.io/coming-soon/"
                   className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
                 >
-                  VisionIQ
+                  TestIQ
                 </Link>
               </li>
             </ul>

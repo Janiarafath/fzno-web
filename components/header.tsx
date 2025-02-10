@@ -62,10 +62,10 @@ const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem>
-                    <Link href="https://fznoflow.netlify.app/">TransformIQ</Link>
+                    <Link href="https://analytixflow.fzno.in/">AnalytixFlow</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link href="https://fznovision.netlify.app/">VisionIQ</Link>
+                    <Link href="https://dr5hn.github.io/coming-soon/">TestIQ</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -135,13 +135,13 @@ const Header = () => {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
                     <DropdownMenuItem>
-                      <Link href="https://fznoflow.netlify.app/" onClick={() => setIsMenuOpen(false)}>
-                        TransformIQ
+                      <Link href="https://analytixflow.fzno.in/" onClick={() => setIsMenuOpen(false)}>
+                       AnalytixFlow
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
-                      <Link href="https://fznovision.netlify.app/" onClick={() => setIsMenuOpen(false)}>
-                        VisionIQ
+                      <Link href="https://dr5hn.github.io/coming-soon/" onClick={() => setIsMenuOpen(false)}>
+                        TestIQ
                       </Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
