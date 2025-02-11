@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { BarChart2, TestTubes } from "lucide-react"
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -67,22 +68,34 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Products</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-4">
               <li>
-                <Link
+                <a
                   href="https://analytixflow.fzno.in/"
-                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
                 >
-                  AnalytixFlow
-                </Link>
+                  <BarChart2 className="w-5 h-5" />
+                  <div>
+                    <div className="font-medium">AnalytixFlow</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">Advanced analytics platform</div>
+                  </div>
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="https://dr5hn.github.io/coming-soon/"
-                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
                 >
-                  TestIQ
-                </Link>
+                  <TestTubes className="w-5 h-5" />
+                  <div>
+                    <div className="font-medium">TestIQ</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">Quality assurance platform</div>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
@@ -126,7 +139,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Contact Us</h4>
             <p className="text-gray-600 dark:text-gray-400">Email: contact@fzno.com</p>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">Phone: +91 8148647818 </p>
+            <p className="text-gray-600 dark:text-gray-400 mt-2">Phone: +91 8148647818</p>
             <p className="text-gray-600 dark:text-gray-400 mt-4">Let's transform your business together</p>
           </div>
           <div>
@@ -182,4 +195,5 @@ const Footer = () => {
 }
 
 export default Footer
+
 
