@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div className="container mx-auto px-6 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
           <div>
             <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Quick Links</h4>
             <ul className="space-y-2">
@@ -85,7 +85,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://dr5hn.github.io/coming-soon/"
+                  href="https://fznotestiq.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
@@ -139,7 +139,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Contact Us</h4>
             <p className="text-gray-600 dark:text-gray-400">Email: contact@fzno.com</p>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">Phone: +91 8148647818</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-2">Phone: +91 8610013967</p>
             <p className="text-gray-600 dark:text-gray-400 mt-4">Let's transform your business together</p>
           </div>
           <div>
@@ -183,11 +183,50 @@ const Footer = () => {
               </a>
             </div>
           </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Legal</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms-conditions"
+                  className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
+
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
-          <p className="text-gray-600 dark:text-gray-400 text-sm text-center">
-            &copy; {new Date().getFullYear()} FZNO. All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
+              &copy; {new Date().getFullYear()} FZNO. All rights reserved.
+            </p>
+            <div className="flex space-x-4 mt-4 md:mt-0">
+              <Link
+                href="/privacy-policy"
+                className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 text-sm"
+              >
+                Privacy Policy
+              </Link>
+              <span className="text-gray-400">|</span>
+              <Link
+                href="/terms-conditions"
+                className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 text-sm"
+              >
+                Terms & Conditions
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
@@ -195,5 +234,4 @@ const Footer = () => {
 }
 
 export default Footer
-
 
