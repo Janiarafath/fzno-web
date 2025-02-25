@@ -17,6 +17,7 @@ export default function Head() {
         
         {/* Open Graph meta tag for Facebook */}
         <meta property="og:image" content="/favicon.ico" />
+        <meta name="google-site-verification" content="QIUn5bpZv3IU-rQ-u9hGlX5Mynj2POxdd35qKd8_e10" />
       </>
     );
   }
