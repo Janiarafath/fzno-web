@@ -1,0 +1,12 @@
+{
+    "name": "FZNO",
+    "short_name": "FZNO",
+    "icons": [{
+        "src": "/favicon.ico",
+        "sizes": "48x48",
+        "type": "image/x-icon"
+    }],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
