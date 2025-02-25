@@ -1,10 +1,22 @@
 export default function Head() {
     return (
       <>
-        <title>My Website</title>
-        <meta name="description" content="A cool Next.js website" />
+        <title>Your Website Title</title>
+        <meta name="description" content="Your website description" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" type="image/png" />
+        
+        {/* Add a favicon for the browser */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        
+        {/* Google-specific meta tags */}
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/favicon.ico" sizes="16x16" />
+        
+        {/* Apple touch icon */}
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        
+        {/* Open Graph meta tag for Facebook */}
+        <meta property="og:image" content="/favicon.ico" />
       </>
     );
   }
