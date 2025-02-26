@@ -1,9 +1,11 @@
-import type { DefaultSeoProps } from "next-seo"
+// app/seo-config.ts
+import type { DefaultSeoProps } from "next-seo";
 
 export const SEO: DefaultSeoProps = {
   titleTemplate: "%s | FZNO",
   defaultTitle: "FZNO - Transform Your Business",
-  description: "Leading technology solutions in AI, Testing, Power BI, and Web Development",
+  description:
+    "Leading technology solutions in AI, Testing, Power BI, and Web Development",
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -26,7 +28,7 @@ export const SEO: DefaultSeoProps = {
   additionalLinkTags: [
     {
       rel: "icon",
-      href: "/favicon.ico",
+      href: "/favicon.png",
       sizes: "any",
     },
     {
@@ -41,5 +43,4 @@ export const SEO: DefaultSeoProps = {
       sizes: "180x180",
     },
   ],
-}
-
+};
