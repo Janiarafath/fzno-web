@@ -1,5 +1,6 @@
 // app/layout.tsx
-"use client"
+"use client";
+
 import { ThemeProvider } from "@/components/theme-provider";
 import { AlertProvider } from "@/components/AlertProvider";
 import Header from "@/components/header";
@@ -8,7 +9,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { DefaultSeo } from "next-seo";
 import { SEO } from "@/lib/seo-config";
-import { metadata } from "./head";  // Import metadata from head.tsx
+import { metadata } from "./head"; // Import metadata from head.tsx
 import "./globals.css";
 
 export default function RootLayout({
@@ -26,13 +27,19 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
+      {/* Automatically injected meta data from metadata object */}
       <head>
-        {/* Apply metadata directly inside <head> */}
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/favicon.ico" />
-        {/* Other meta tags can be added here if needed */}
+        {metadata.icons.icon.map((icon, index) => (
+          <link key={index} rel="icon" href={icon.url} sizes={icon.sizes} />
+        ))}
+        {metadata.icons.apple.map((appleIcon, index) => (
+          <link key={index} rel="apple-touch-icon" href={appleIcon.url} sizes={appleIcon.sizes} />
+        ))}
+        <meta name="google-site-verification" content={metadata.verification.google} />
       </head>
+
       <body>
         <DefaultSeo {...SEO} />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
