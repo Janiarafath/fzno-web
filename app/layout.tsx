@@ -1,4 +1,5 @@
 // app/layout.tsx
+
 "use client";
 
 import { ThemeProvider } from "@/components/theme-provider";
@@ -7,10 +8,10 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { DefaultSeo } from "next-seo";
-import { SEO } from "@/lib/seo-config";
-import { metadata } from "./head"; // Import metadata from head.tsx
-import "./globals.css";
+import { metadata } from "./head";  // Import metadata from head.tsx
+import Head from "next/head";  // Import Head from next/head
+
+import "./globals.css"; // Import global styles here
 
 export default function RootLayout({
   children,
@@ -27,21 +28,27 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* Automatically injected meta data from metadata object */}
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        {metadata.icons.icon.map((icon, index) => (
-          <link key={index} rel="icon" href={icon.url} sizes={icon.sizes} />
-        ))}
-        {metadata.icons.apple.map((appleIcon, index) => (
-          <link key={index} rel="apple-touch-icon" href={appleIcon.url} sizes={appleIcon.sizes} />
-        ))}
-        <meta name="google-site-verification" content={metadata.verification.google} />
-      </head>
-
       <body>
-        <DefaultSeo {...SEO} />
+        <Head>
+          <title>FZNO</title>
+          <meta name="description" content={metadata.description} />
+          {metadata.icons.icon.map((icon, index) => (
+            <link key={index} rel="icon" href={icon.url} sizes={icon.sizes} />
+          ))}
+          {metadata.icons.apple.map((appleIcon, index) => (
+            <link
+              key={index}
+              rel="apple-touch-icon"
+              href={appleIcon.url}
+              sizes={appleIcon.sizes}
+            />
+          ))}
+          <meta
+            name="google-site-verification"
+            content={metadata.verification.google}
+          />
+        </Head>
+
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AlertProvider>
             <div className="flex flex-col min-h-screen">
