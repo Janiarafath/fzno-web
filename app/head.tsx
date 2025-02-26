@@ -1,24 +1,19 @@
-export default function Head() {
-    return (
-      <>
-        <title>Your Website Title</title>
-        <meta name="description" content="Your website description" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        {/* Add a favicon for the browser */}
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        
-        {/* Google-specific meta tags */}
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/favicon.ico" sizes="16x16" />
-        
-        {/* Apple touch icon */}
-        <link rel="apple-touch-icon" href="/favicon.ico" />
-        
-        {/* Open Graph meta tag for Facebook */}
-        <meta property="og:image" content="/favicon.ico" />
-        <meta name="google-site-verification" content="QIUn5bpZv3IU-rQ-u9hGlX5Mynj2POxdd35qKd8_e10" />
-      </>
-    );
-  }
-  
+// app/head.tsx
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.fzno.in"),
+  title: "FZNO - Transform Your Business",
+  description: "Leading technology solutions in AI, Testing, Power BI, and Web Development",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  verification: {
+    google: "QIUn5bpZv3IU-rQ-u9hGlX5Mynj2POxdd35qKd8_e10",
+  },
+};

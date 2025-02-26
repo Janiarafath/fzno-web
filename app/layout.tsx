@@ -1,13 +1,14 @@
-"use client";
-
+// app/layout.tsx
+"use client"
 import { ThemeProvider } from "@/components/theme-provider";
 import { AlertProvider } from "@/components/AlertProvider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Head from "next/head"; // Import Head for metadata
-
+import { DefaultSeo } from "next-seo";
+import { SEO } from "@/lib/seo-config";
+import { metadata } from "./head";  // Import metadata from head.tsx
 import "./globals.css";
 
 export default function RootLayout({
@@ -25,12 +26,15 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
-        <title>My Website</title>
-        <meta name="description" content="A cool Next.js website" />
+      <head>
+        {/* Apply metadata directly inside <head> */}
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+        {/* Other meta tags can be added here if needed */}
+      </head>
       <body>
+        <DefaultSeo {...SEO} />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AlertProvider>
             <div className="flex flex-col min-h-screen">
@@ -44,6 +48,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-
-import './globals.css'
