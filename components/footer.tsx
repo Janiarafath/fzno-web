@@ -85,7 +85,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.fznotestiq.netlify.app/"
+                  href="https://fznotestiq.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
