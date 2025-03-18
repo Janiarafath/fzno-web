@@ -20,13 +20,13 @@ const products = [
     title: "TestIQ",
     description: "Intelligent test automation and quality assurance platform",
     icon: <TestTubes className="w-6 h-6 text-purple-500" />,
-    href: "https://dr5hn.github.io/coming-soon/",
+    href: "https://www.fznotestiq.netlify.app/",
   },
   {
     title: "AI Extractor",
     description: "Advanced AI-powered data extraction and processing solution",
     icon: <Brain className="w-6 h-6 text-purple-500" />,
-    href: "https://ai-extractor.fzno.in/",
+    href: "https://ai-extractor.vercel.app/",
   },
 ]
 

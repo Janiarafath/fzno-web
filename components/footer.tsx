@@ -85,7 +85,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://dr5hn.github.io/coming-soon/"
+                  href="https://www.fznotestiq.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
@@ -99,7 +99,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://ai-extractor.fzno.in/"
+                  href="https://ai-extractor.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
