@@ -52,6 +52,33 @@ export default function WebDevelopmentPage() {
                 ))}
               </ul>
 
+              <h3 className="text-2xl font-semibold mb-4">White Label Solutions</h3>
+              <p className="mb-4">
+                We provide comprehensive white label solutions that can be branded as your own, allowing you to expand
+                your service offerings without the overhead of development. Our white label solutions include:
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                {[
+                  "E-commerce Platforms",
+                  "Food Delivery Applications",
+                  "Booking & Reservation Systems",
+                  "Learning Management Systems",
+                  "Real Estate Portals",
+                  "Healthcare Solutions",
+                  "Marketplace Platforms",
+                  "Custom Business Applications",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mb-6">
+                Our white label solutions are fully customizable, scalable, and can be deployed quickly, allowing you to
+                meet your clients' needs efficiently while maintaining your brand identity.
+              </p>
+
               <h3 className="text-2xl font-semibold mb-4">Technologies We Use</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 {[
@@ -90,9 +117,9 @@ export default function WebDevelopmentPage() {
               </ol>
 
               <p>
-                Whether you need a simple corporate website or a sophisticated web application, our team of experienced
-                developers is committed to delivering web solutions that are not only visually appealing but also
-                performant, secure, and scalable.
+                Whether you need a simple corporate website, a sophisticated web application, or a white label solution
+                for your clients, our team of experienced developers is committed to delivering web solutions that are
+                not only visually appealing but also performant, secure, and scalable.
               </p>
             </div>
           </div>

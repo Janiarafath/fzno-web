@@ -1,13 +1,13 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
-import { Menu, X, Sun, Moon, ChevronDown, ChevronUp, Eye, Workflow,TestTubes,BarChart2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import AnimatedLogo from "./AnimatedLogo";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { useState, useEffect } from "react"
+import { useTheme } from "next-themes"
+import { Menu, X, Sun, Moon, ChevronDown, BarChart2, TestTubes, Brain } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { usePathname, useRouter } from "next/navigation"
+import AnimatedLogo from "./AnimatedLogo"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 const products = [
   {
@@ -20,39 +20,67 @@ const products = [
     title: "TestIQ",
     description: "Intelligent test automation and quality assurance platform",
     icon: <TestTubes className="w-6 h-6 text-purple-500" />,
-    href: "https://fznotestiq.netlify.app/",
+    href: "https://dr5hn.github.io/coming-soon/",
   },
-];
+  {
+    title: "AI Extractor",
+    description: "Advanced AI-powered data extraction and processing solution",
+    icon: <Brain className="w-6 h-6 text-purple-500" />,
+    href: "https://ai-extractor.fzno.in/",
+  },
+]
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  const pathname = usePathname();
-  const router = useRouter();
-  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isProductsOpen, setIsProductsOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
-  const isHomePage = pathname === "/";
+  const isHomePage = pathname === "/"
 
   const scrollToSection = (id: string) => {
     if (isHomePage) {
-      const element = document.getElementById(id);
+      const element = document.getElementById(id)
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: "smooth" })
       }
     } else {
-      router.push(`/#${id}`);
+      router.push(`/#${id}`)
     }
-    setIsMenuOpen(false);
-  };
-
-  if (!mounted) {
-    return null;
+    setIsMenuOpen(false)
   }
+
+  const ProductMenu = ({ mobile = false }: { mobile?: boolean }) => (
+    <div className={`${mobile ? "" : "w-[400px]"} p-4`}>
+      <div className="grid gap-4">
+        <h3 className="font-medium text-sm text-gray-500 dark:text-gray-400">PLATFORM</h3>
+        {products.map((product) => (
+          <a
+            key={product.title}
+            href={product.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            onClick={() => mobile && setIsMenuOpen(false)}
+          >
+            <div className="p-2 rounded-lg bg-purple-50 dark:bg-purple-900/20">{product.icon}</div>
+            <div>
+              <div className="font-medium mb-1">{product.title}</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">{product.description}</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+
+  if (!mounted) return null
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -75,24 +103,8 @@ const Header = () => {
                     className={`ml-1 w-4 h-4 transition-transform duration-200 ${isProductsOpen ? "rotate-180" : ""}`}
                   />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-[400px] p-4">
-                  <div className="grid gap-4">
-                    <h3 className="font-medium text-sm text-gray-500 dark:text-gray-400">PLATFORM</h3>
-                    {products.map((product) => (
-                      <DropdownMenuItem key={product.title} asChild>
-                        <Link
-                          href={product.href}
-                          className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                        >
-                          <div className="flex items-start gap-3 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">{product.icon}</div>
-                          <div>
-                            <div className="font-medium mb-1">{product.title}</div>
-                            <div className="text-sm text-gray-500 dark:text-gray-400">{product.description}</div>
-                          </div>
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </div>
+                <DropdownMenuContent>
+                  <ProductMenu />
                 </DropdownMenuContent>
               </DropdownMenu>
               <button
@@ -105,10 +117,10 @@ const Header = () => {
                 href="/who-we-are"
                 className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                 onClick={(e) => {
-                  e.preventDefault();
+                  e.preventDefault()
                   router.push("/who-we-are").then(() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  });
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  })
                 }}
               >
                 Who We Are
@@ -152,32 +164,8 @@ const Header = () => {
                 >
                   Home
                 </Link>
-                <div className="space-y-2">
-                  <div
-                    className="flex items-center justify-between text-gray-700 dark:text-gray-300 font-medium cursor-pointer"
-                    onClick={() => setIsProductsOpen(!isProductsOpen)}
-                  >
-                    Products
-                    {isProductsOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                  </div>
-                  {isProductsOpen && (
-                    <div className="space-y-2 pl-4">
-                      {products.map((product) => (
-                        <Link
-                          key={product.title}
-                          href={product.href}
-                          className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="p-2 rounded-lg bg-purple-50 dark:bg-purple-900/20">{product.icon}</div>
-                          <div>
-                            <div className="font-medium mb-1">{product.title}</div>
-                            <div className="text-sm text-gray-500 dark:text-gray-400">{product.description}</div>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                <div>
+                  <ProductMenu mobile />
                 </div>
                 <button
                   onClick={() => scrollToSection("services")}
@@ -189,10 +177,10 @@ const Header = () => {
                   href="/who-we-are"
                   className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                   onClick={(e) => {
-                    e.preventDefault();
+                    e.preventDefault()
                     router.push("/who-we-are").then(() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
-                    });
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    })
                   }}
                 >
                   Who We Are
@@ -209,7 +197,8 @@ const Header = () => {
         </div>
       )}
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
+

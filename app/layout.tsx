@@ -14,6 +14,18 @@ export const metadata: Metadata = {
   },
   description:
     "Leading technology solutions in AI, Testing, Power BI, and Web Development",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon.png', type: 'image/png', sizes: '16x16' }
+    ],
+    apple: [
+      { url: '/favicon.png', type: 'image/png', sizes: '180x180' }
+    ],
+    shortcut: ['/favicon.ico'],
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -32,10 +44,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@fzno",
     creator: "@fzno",
-  },
-  icons: {
-    icon: "/favicon.png",
-    apple: "/apple-touch-icon.png",
   },
   verification: {
     google: "QIUn5bpZv3IU-rQ-u9hGlX5Mynj2POxdd35qKd8_e10",
