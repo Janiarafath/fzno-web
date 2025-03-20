@@ -153,7 +153,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Contact Us</h4>
             <p className="text-gray-600 dark:text-gray-400">Email: contact@fzno.com</p>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">Phone: +91 8148647818</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-2">Phone: +91 8610013967</p>
             <p className="text-gray-600 dark:text-gray-400 mt-4">Let's transform your business together</p>
           </div>
           <div>
@@ -227,7 +227,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <Link
-                href="/privacy-policy"
+                href="/privacy"
                 className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 text-sm"
               >
                 Privacy Policy
